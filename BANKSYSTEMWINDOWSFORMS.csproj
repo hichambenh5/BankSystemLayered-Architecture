@@ -49,12 +49,32 @@
   <ItemGroup>
     <Compile Include="ClsCustomer.cs" />
     <Compile Include="ClsCustomerData.cs" />
+    <Compile Include="ClsRoles.cs" />
+    <Compile Include="ClsRolesData.cs" />
     <Compile Include="ClsValiditing.cs" />
+    <Compile Include="CtrlCustomerCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlCustomerCard.Designer.cs">
+      <DependentUpon>CtrlCustomerCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlCustomerCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlCustomerCardWithFilter.Designer.cs">
+      <DependentUpon>CtrlCustomerCardWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddEditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddEditCustomer.Designer.cs">
       <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFindCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFindCustomer.Designer.cs">
+      <DependentUpon>FrmFindCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmListCustomer.cs">
       <SubType>Form</SubType>
@@ -64,8 +84,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CtrlCustomerCard.resx">
+      <DependentUpon>CtrlCustomerCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlCustomerCardWithFilter.resx">
+      <DependentUpon>CtrlCustomerCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddEditCustomer.resx">
       <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFindCustomer.resx">
+      <DependentUpon>FrmFindCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListCustomer.resx">
       <DependentUpon>FrmListCustomer.cs</DependentUpon>

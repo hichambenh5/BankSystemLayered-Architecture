@@ -41,6 +41,7 @@
             this.addCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllCustomer)).BeginInit();
             this.cmsCustomer.SuspendLayout();
             this.SuspendLayout();
@@ -136,9 +137,10 @@
             this.cmsCustomer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addCustomerToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem});
+            this.deleteToolStripMenuItem,
+            this.showCustomerToolStripMenuItem});
             this.cmsCustomer.Name = "cmsCustomer";
-            this.cmsCustomer.Size = new System.Drawing.Size(181, 98);
+            this.cmsCustomer.Size = new System.Drawing.Size(181, 122);
             // 
             // addCustomerToolStripMenuItem
             // 
@@ -160,6 +162,13 @@
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.deleteToolStripMenuItem.Text = "delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
+            // 
+            // showCustomerToolStripMenuItem
+            // 
+            this.showCustomerToolStripMenuItem.Name = "showCustomerToolStripMenuItem";
+            this.showCustomerToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.showCustomerToolStripMenuItem.Text = "show customer";
+            this.showCustomerToolStripMenuItem.Click += new System.EventHandler(this.ShowCustomerToolStripMenuItem_Click);
             // 
             // FrmListCustomer
             // 
@@ -198,5 +207,6 @@
         private System.Windows.Forms.Label lblRecordsCount;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem showCustomerToolStripMenuItem;
     }
 }

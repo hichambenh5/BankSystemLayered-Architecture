@@ -115,5 +115,11 @@ namespace BANKSYSTEMWINDOWSFORMS
                     MessageBox.Show("customer was not deleted because it has data linked to it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             }
+
+        private void ShowCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFindCustomer frm = new FrmFindCustomer();
+            frm.ShowDialog();
+        }
     }
 }

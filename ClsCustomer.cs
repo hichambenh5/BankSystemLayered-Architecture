@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BANKSYSTEMWINDOWSFORMS
 {
-    internal class ClsCustomer
+  public class ClsCustomer
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
