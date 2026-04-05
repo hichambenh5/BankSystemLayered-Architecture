@@ -70,17 +70,29 @@
     <Compile Include="frmAddEditCustomer.Designer.cs">
       <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmFindCustomer.cs">
+    <Compile Include="FrmAddRoles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmFindCustomer.Designer.cs">
-      <DependentUpon>FrmFindCustomer.cs</DependentUpon>
+    <Compile Include="FrmAddRoles.Designer.cs">
+      <DependentUpon>FrmAddRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmListCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmListCustomer.Designer.cs">
       <DependentUpon>FrmListCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListRoles.Designer.cs">
+      <DependentUpon>FrmListRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,11 +105,17 @@
     <EmbeddedResource Include="frmAddEditCustomer.resx">
       <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmFindCustomer.resx">
-      <DependentUpon>FrmFindCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAddRoles.resx">
+      <DependentUpon>FrmAddRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListCustomer.resx">
       <DependentUpon>FrmListCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListRoles.resx">
+      <DependentUpon>FrmListRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -120,6 +139,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out 32 -2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

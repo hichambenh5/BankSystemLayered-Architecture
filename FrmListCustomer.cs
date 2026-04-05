@@ -118,7 +118,17 @@ namespace BANKSYSTEMWINDOWSFORMS
 
         private void ShowCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmFindCustomer frm = new FrmFindCustomer();
+            
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            frmAddEditCustomer frm = new frmAddEditCustomer();
             frm.ShowDialog();
         }
     }
