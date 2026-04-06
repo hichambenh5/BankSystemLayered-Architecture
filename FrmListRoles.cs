@@ -36,5 +36,23 @@ namespace BANKSYSTEMWINDOWSFORMS
             frm.ShowDialog();
             _RefreshRolesList();
         }
+
+        private void DeleteRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete Roles [" + dgvallroles.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+
+            {
+
+                //Perform Delele and refresh
+                if (ClsRoles.DeleteRoles((int)dgvallroles.CurrentRow.Cells[0].Value))
+                {
+                    MessageBox.Show("Roles Deleted Successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _RefreshRolesList();
+                }
+
+                else
+                    MessageBox.Show("Roles was not deleted because it has data linked to it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

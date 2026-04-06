@@ -44,5 +44,28 @@ namespace BANKSYSTEMWINDOWSFORMS
             FrmListRoles frm = new FrmListRoles();
             frm.ShowDialog();
         }
+
+        private void AddUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAddRoles frm = new FrmAddRoles();
+            frm.ShowDialog();
+        }
+
+        private void DeleteClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListUser frm = new FrmListUser();
+            frm.ShowDialog();
+
+        }
     }
 }

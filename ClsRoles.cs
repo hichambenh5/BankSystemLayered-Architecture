@@ -22,7 +22,7 @@ namespace BANKSYSTEMWINDOWSFORMS
             eManageRegisters = 8,
             eUpdatePermissions = 16
         }
-        enPermissions permission = enPermissions.eNone;
+        
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
        
@@ -45,9 +45,9 @@ namespace BANKSYSTEMWINDOWSFORMS
             this.RoleID = -1;
             this.RoleName = "";
             Mode = enMode.AddNew;
-            permission = enPermissions.eNone;
+            Permissions = (int)enPermissions.eNone;
         }
-        public ClsRoles(int Roleid, string rolename, int permesion) {
+        private ClsRoles(int Roleid, string rolename, int permesion) {
 
             this.RoleID = Roleid;
             this.RoleName = rolename;

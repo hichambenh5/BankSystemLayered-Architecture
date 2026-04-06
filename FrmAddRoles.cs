@@ -55,6 +55,7 @@ namespace BANKSYSTEMWINDOWSFORMS
             if (_roles == null)
             {
                 MessageBox.Show("Not Found");
+                this.Close();
                 return;
             }
             lblID.Text = _roles.RoleID.ToString();
@@ -123,15 +124,20 @@ namespace BANKSYSTEMWINDOWSFORMS
                 MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            _roles.RoleName = txtRolesName.Text;
+            _roles.RoleName = txtRolesName.Text.Trim();
             _roles.Permissions = _CalculatePermissions();
             if (_roles.Save())
             {
+                int savedID = _roles.RoleID;
                 MessageBox.Show("Data Saved Successfully.");
                 Mode = enMode.Update;
                 lblTitle.Text = "Update Role";
                 lblID.Text = _roles.RoleID.ToString();
-                DataBack?.Invoke(this, _RoleID);
+                
+                DataBack?.Invoke(this, _roles.RoleID);
+                FrmAddNewUser frm = new FrmAddNewUser(savedID, false);
+                frm.ShowDialog();
+                this.Close();
             }
             else
             {

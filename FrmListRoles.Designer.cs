@@ -28,22 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvallroles = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.lblRecordsCount = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvallroles)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvallroles
             // 
             this.dgvallroles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvallroles.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvallroles.Location = new System.Drawing.Point(8, 120);
             this.dgvallroles.Name = "dgvallroles";
             this.dgvallroles.Size = new System.Drawing.Size(800, 360);
             this.dgvallroles.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteRolesToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(154, 28);
+            // 
+            // deleteRolesToolStripMenuItem
+            // 
+            this.deleteRolesToolStripMenuItem.Name = "deleteRolesToolStripMenuItem";
+            this.deleteRolesToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.deleteRolesToolStripMenuItem.Text = "Delete Roles";
+            this.deleteRolesToolStripMenuItem.Click += new System.EventHandler(this.DeleteRolesToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -112,6 +131,7 @@
             this.Text = "FrmListRoles";
             this.Load += new System.EventHandler(this.FrmListRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvallroles)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,5 +145,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deleteRolesToolStripMenuItem;
     }
 }

@@ -9,12 +9,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{02EA681E-C
 	ProjectSection(SolutionItems) = preProject
 		ClsCustomerData.cs = ClsCustomerData.cs
 		ClsRolesData.cs = ClsRolesData.cs
+		ClsUsersData.cs = ClsUsersData.cs
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{01BBAF29-F1BA-417C-A237-06996D9B73F8}"
 	ProjectSection(SolutionItems) = preProject
 		ClsCustomer.cs = ClsCustomer.cs
 		ClsRoles.cs = ClsRoles.cs
+		ClsUser.cs = ClsUser.cs
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}"

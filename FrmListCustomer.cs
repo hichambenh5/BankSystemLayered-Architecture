@@ -104,7 +104,6 @@ namespace BANKSYSTEMWINDOWSFORMS
 
             {
 
-                //Perform Delele and refresh
                 if (ClsCustomer.DeleteCustomers((int)dgvAllCustomer.CurrentRow.Cells[0].Value))
                 {
                     MessageBox.Show("customer Deleted Successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
