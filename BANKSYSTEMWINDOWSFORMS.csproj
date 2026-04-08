@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsAccountTypeData.cs" />
     <Compile Include="ClsCustomer.cs" />
     <Compile Include="ClsCustomerData.cs" />
     <Compile Include="ClsRoles.cs" />
