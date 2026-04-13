@@ -108,14 +108,17 @@ namespace BANKSYSTEMWINDOWSFORMS
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@TypeName", TypeName);
                 command.Parameters.AddWithValue("@MinimumBalance", MinimumBalance);
+                SqlParameter parameter = new SqlParameter("@NewID", SqlDbType.Int)
+                {
+                    Direction=ParameterDirection.Output
+                };
+                command.Parameters.Add(parameter);
                 try
                 {
                     connection.Open();
-                    object result = command.ExecuteScalar();
-                    if(result!=null && result != DBNull.Value)
-                    {
-                        AccountTypeID = Convert.ToInt32(result);
-                    }
+                    command.ExecuteNonQuery();
+                    AccountTypeID = (int)parameter.Value;
+                    
                 }catch(Exception ex)
                 {
                     _LogError(ex);
@@ -131,7 +134,7 @@ namespace BANKSYSTEMWINDOWSFORMS
             using (SqlCommand command = new SqlCommand("SP_UpdateAccountType", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@AccountTypeID", AccountTypeID);
+                command.Parameters.AddWithValue("@ID", AccountTypeID);
                 command.Parameters.AddWithValue("@TypeName", TypeName);
                 command.Parameters.AddWithValue("@MinimumBalance", MinimumBalance);
                 try {
@@ -151,7 +154,7 @@ namespace BANKSYSTEMWINDOWSFORMS
             using (SqlCommand command = new SqlCommand("SP_DeleteAccountType", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@AccountTypeID", AccountTypeID);
+                command.Parameters.AddWithValue("@ID", AccountTypeID);
 
                 try
                 {
@@ -202,8 +205,7 @@ namespace BANKSYSTEMWINDOWSFORMS
                     connection.Open();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        // هنا نستخدم خاصية HasRows 
-                        // إذا وجد السطر ستكون True وإلا False
+                       
                         isFound = reader.HasRows;
                     }
                 }
