@@ -22,8 +22,17 @@ namespace BANKSYSTEMWINDOWSFORMS
         public string AccountNumber { get; set; }
        
         public bool IsDeleted { get; set; }
-       
-       public ClsAccount()
+
+        public ClsAccountType AccountTypeInfo { get; set; }
+        public int accountTypeID
+        {
+            get
+            {
+                return (AccountTypeInfo != null) ? AccountTypeInfo.AccountTypeID : this.AccountTypeID;
+            }
+        }
+
+        public ClsAccount()
         {
             this.AccountID = -1;
             this.PersonID = -1;
@@ -35,7 +44,8 @@ namespace BANKSYSTEMWINDOWSFORMS
             this.AccountNumber = "";
            
             this.IsDeleted = false;
-           
+            this.AccountTypeInfo = new ClsAccountType();
+
             Mode = enMode.AddNew;
         }
         private ClsAccount(
@@ -80,9 +90,12 @@ namespace BANKSYSTEMWINDOWSFORMS
                 ,ref IsDeleted);
             if (isfound)
             {
-                return new ClsAccount(accountid, PersonID, AccountTypeID, Balance, Status,
+                ClsAccount account= new ClsAccount(accountid, PersonID, AccountTypeID, Balance, Status,
                     CreatedByUserID, CreationDate, AccountNumber, 
                     IsDeleted);
+                account.AccountTypeInfo = ClsAccountType.find(AccountTypeID);
+                return account;
+               
             }
             else
             {
@@ -114,7 +127,7 @@ namespace BANKSYSTEMWINDOWSFORMS
 
             if (isFound)
             {
-                return new ClsAccount(
+                ClsAccount account= new ClsAccount(
                     AccountID,
                     PersonID,
                     AccountTypeID,
@@ -127,6 +140,8 @@ namespace BANKSYSTEMWINDOWSFORMS
                     IsDeleted
                   
                 );
+                account.AccountTypeInfo = ClsAccountType.find(AccountTypeID);
+                return account;
             }
 
             return null;
@@ -156,7 +171,7 @@ namespace BANKSYSTEMWINDOWSFORMS
 
             if (isFound)
             {
-                return new ClsAccount(
+               ClsAccount account= new ClsAccount(
                     AccountID,
                     personID,
                     AccountTypeID,
@@ -169,6 +184,8 @@ namespace BANKSYSTEMWINDOWSFORMS
                     IsDeleted
                    
                 );
+                account.AccountTypeInfo = ClsAccountType.find(AccountTypeID);
+                return account;
             }
 
             return null;

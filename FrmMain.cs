@@ -12,9 +12,11 @@ namespace BANKSYSTEMWINDOWSFORMS
 {
     public partial class FrmMain : Form
     {
-        public FrmMain()
+        frmLogin _login;
+        public FrmMain(frmLogin login)
         {
             InitializeComponent();
+            _login = login;
         }
 
         private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -66,6 +68,62 @@ namespace BANKSYSTEMWINDOWSFORMS
             FrmListUser frm = new FrmListUser();
             frm.ShowDialog();
 
+        }
+
+        private void AddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddNewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditAccount frm = new frmAddEditAccount();
+            frm.ShowDialog();
+        }
+
+        private void AddNewAccountTypeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmAddEditAccountType frm = new FrmAddEditAccountType();
+            frm.ShowDialog();
+        }
+
+        private void ListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListAccount frm = new FrmListAccount();
+            frm.ShowDialog();
+            
+        }
+
+        private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AccountSettingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangePassordToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void SignOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClsGlobal.CurrentUser = null;
+            _login.Show();
+            this.Close();
         }
     }
 }

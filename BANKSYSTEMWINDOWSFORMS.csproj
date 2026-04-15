@@ -53,6 +53,7 @@
     <Compile Include="ClsAccountTypeData.cs" />
     <Compile Include="ClsCustomer.cs" />
     <Compile Include="ClsCustomerData.cs" />
+    <Compile Include="ClsGlobal.cs" />
     <Compile Include="ClsRoles.cs" />
     <Compile Include="ClsRolesData.cs" />
     <Compile Include="ClsUser.cs" />
@@ -70,6 +71,18 @@
     </Compile>
     <Compile Include="CtrlCustomerCardWithFilter.Designer.cs">
       <DependentUpon>CtrlCustomerCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEditAccount.Designer.cs">
+      <DependentUpon>frmAddEditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditAccountType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditAccountType.Designer.cs">
+      <DependentUpon>FrmAddEditAccountType.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddEditCustomer.cs">
       <SubType>Form</SubType>
@@ -89,6 +102,18 @@
     <Compile Include="FrmAddRoles.Designer.cs">
       <DependentUpon>FrmAddRoles.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListAccount.Designer.cs">
+      <DependentUpon>FrmListAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListAccountType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListAccountType.Designer.cs">
+      <DependentUpon>FrmListAccountType.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmListCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +132,12 @@
     <Compile Include="FrmListUser.Designer.cs">
       <DependentUpon>FrmListUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +152,12 @@
     <EmbeddedResource Include="CtrlCustomerCardWithFilter.resx">
       <DependentUpon>CtrlCustomerCardWithFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEditAccount.resx">
+      <DependentUpon>frmAddEditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditAccountType.resx">
+      <DependentUpon>FrmAddEditAccountType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddEditCustomer.resx">
       <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +167,12 @@
     <EmbeddedResource Include="FrmAddRoles.resx">
       <DependentUpon>FrmAddRoles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmListAccount.resx">
+      <DependentUpon>FrmListAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListAccountType.resx">
+      <DependentUpon>FrmListAccountType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmListCustomer.resx">
       <DependentUpon>FrmListCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListUser.resx">
       <DependentUpon>FrmListUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -179,6 +225,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_in 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_settings 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compte-bancaire.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

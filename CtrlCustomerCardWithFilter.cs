@@ -105,8 +105,7 @@ namespace BANKSYSTEMWINDOWSFORMS
 
         private void TxtFilterValue_TextChanged(object sender, EventArgs e)
         {
-            txtFilterValue.Text = "";
-            txtFilterValue.Focus();
+            
         }
 
         private void BtnFind_Click(object sender, EventArgs e)
