@@ -116,7 +116,8 @@ namespace BANKSYSTEMWINDOWSFORMS
 
         private void ChangePassordToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-           
+            FrmChangePassword frm = new FrmChangePassword(ClsGlobal.CurrentUser.UserID);
+            frm.ShowDialog();
         }
 
         private void SignOutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -124,6 +125,12 @@ namespace BANKSYSTEMWINDOWSFORMS
             ClsGlobal.CurrentUser = null;
             _login.Show();
             this.Close();
+        }
+
+        private void ListAccountTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListAccountType frm = new FrmListAccountType();
+            frm.ShowDialog();
         }
     }
 }
