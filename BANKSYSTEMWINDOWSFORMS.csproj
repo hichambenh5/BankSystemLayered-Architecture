@@ -62,6 +62,12 @@
     <Compile Include="ClsUsersData.cs" />
     <Compile Include="ClsUtil.cs" />
     <Compile Include="ClsValiditing.cs" />
+    <Compile Include="ctrlAccountCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlAccountCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlAccountCardWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="CtrlCustomerCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -73,6 +79,12 @@
     </Compile>
     <Compile Include="CtrlCustomerCardWithFilter.Designer.cs">
       <DependentUpon>CtrlCustomerCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAccountTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAccountTransactions.Designer.cs">
+      <DependentUpon>FrmAccountTransactions.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddEditAccount.cs">
       <SubType>Form</SubType>
@@ -109,6 +121,12 @@
     </Compile>
     <Compile Include="FrmChangePassword.Designer.cs">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDeposit.Designer.cs">
+      <DependentUpon>FrmDeposit.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmListAccount.cs">
       <SubType>Form</SubType>
@@ -152,13 +170,37 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmManageTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmManageTransactions.Designer.cs">
+      <DependentUpon>FrmManageTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTransfer.Designer.cs">
+      <DependentUpon>FrmTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWithdraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWithdraw.Designer.cs">
+      <DependentUpon>FrmWithdraw.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ctrlAccountCardWithFilter.resx">
+      <DependentUpon>ctrlAccountCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CtrlCustomerCard.resx">
       <DependentUpon>CtrlCustomerCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlCustomerCardWithFilter.resx">
       <DependentUpon>CtrlCustomerCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAccountTransactions.resx">
+      <DependentUpon>FrmAccountTransactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddEditAccount.resx">
       <DependentUpon>frmAddEditAccount.cs</DependentUpon>
@@ -177,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmChangePassword.resx">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDeposit.resx">
+      <DependentUpon>FrmDeposit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListAccount.resx">
       <DependentUpon>FrmListAccount.cs</DependentUpon>
@@ -198,6 +243,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmManageTransactions.resx">
+      <DependentUpon>FrmManageTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTransfer.resx">
+      <DependentUpon>FrmTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWithdraw.resx">
+      <DependentUpon>FrmWithdraw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

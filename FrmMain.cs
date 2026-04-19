@@ -132,5 +132,29 @@ namespace BANKSYSTEMWINDOWSFORMS
             FrmListAccountType frm = new FrmListAccountType();
             frm.ShowDialog();
         }
+
+        private void DepositToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDeposit frm = new FrmDeposit();
+            frm.ShowDialog();
+        }
+
+        private void WithdrawToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmWithdraw frm = new FrmWithdraw();
+            frm.ShowDialog();
+        }
+
+        private void TransferToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTransfer frm = new FrmTransfer();
+            frm.ShowDialog();
+        }
+
+        private void FrmManageTransactionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmManageTransactions frm = new FrmManageTransactions();
+            frm.ShowDialog();
+        }
     }
 }

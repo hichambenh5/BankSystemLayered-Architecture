@@ -110,5 +110,12 @@ namespace BANKSYSTEMWINDOWSFORMS
                     MessageBox.Show("Account was not deleted because it has data linked to it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void AccountTransactionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int accountid = (int)dgvallaccount.CurrentRow.Cells[0].Value;
+            FrmAccountTransactions frm = new FrmAccountTransactions(accountid);
+            frm.ShowDialog();
+        }
     }
 }

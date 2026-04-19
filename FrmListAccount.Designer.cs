@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblRecordsCount = new System.Windows.Forms.Label();
+            this.accountTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvallaccount)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,9 +60,10 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addNewAccountToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem});
+            this.deleteToolStripMenuItem,
+            this.accountTransactionsToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(189, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(204, 122);
             // 
             // addNewAccountToolStripMenuItem
             // 
@@ -150,11 +152,18 @@
             // lblRecordsCount
             // 
             this.lblRecordsCount.AutoSize = true;
-            this.lblRecordsCount.Location = new System.Drawing.Point(112, 512);
+            this.lblRecordsCount.Location = new System.Drawing.Point(120, 512);
             this.lblRecordsCount.Name = "lblRecordsCount";
             this.lblRecordsCount.Size = new System.Drawing.Size(19, 13);
             this.lblRecordsCount.TabIndex = 105;
             this.lblRecordsCount.Text = "??";
+            // 
+            // accountTransactionsToolStripMenuItem
+            // 
+            this.accountTransactionsToolStripMenuItem.Name = "accountTransactionsToolStripMenuItem";
+            this.accountTransactionsToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
+            this.accountTransactionsToolStripMenuItem.Text = "AccountTransactions";
+            this.accountTransactionsToolStripMenuItem.Click += new System.EventHandler(this.AccountTransactionsToolStripMenuItem_Click);
             // 
             // FrmListAccount
             // 
@@ -193,5 +202,6 @@
         private System.Windows.Forms.ToolStripMenuItem addNewAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem accountTransactionsToolStripMenuItem;
     }
 }
