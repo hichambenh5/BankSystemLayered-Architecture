@@ -77,27 +77,6 @@ You can log in using the following credentials:
 
 ---
 
-### 📌 Steps to Run
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   ```
-
-2. Open the solution file in Visual Studio
-
-3. Configure the database connection in `App.config`
-
-4. Run the project
-
----
-
-## 📸 Screenshots
-
-*(You can add screenshots here to showcase the UI)*
-
----
 
 ## 💡 Future Improvements
 
