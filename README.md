@@ -1,49 +1,49 @@
 # 🏦 Bank Management System
 
-A full-featured banking system built using **C#**, **SQL Server**, and **Windows Forms**, following a **Layered Architecture** approach (Presentation, Business Logic, Data Access).
+A full-featured **Banking System** built using **C#**, **SQL Server**, and **Windows Forms**, designed with a **Layered Architecture** approach to ensure scalability, maintainability, and clean separation of concerns.
 
 ---
 
 ## 🚀 Features
 
-* 🔐 **Authentication System**
+### 🔐 Authentication & Authorization
 
-  * Secure login with role-based access control
+* Secure login system
+* Role-based access control
+* Bitwise permission management
 
-* 👥 **Customer Management**
+### 👥 Customer Management
 
-  * Add, update, and manage customer data
+* Create, update, and manage customer records
+* Link customers with their bank accounts
 
-* 💳 **Account Management**
+### 💳 Account Management
 
-  * Create and manage different account types
-  * Link accounts to customers
+* Support for multiple account types
+* Full account lifecycle management (Create / Update / View)
 
-* 💸 **Financial Transactions**
+### 💸 Financial Transactions
 
-  * Deposit
-  * Withdraw
-  * Transfer between accounts
+* Deposit funds
+* Withdraw funds
+* Transfer between accounts
+* Ensures consistency using **database transactions (Commit / Rollback)**
 
-* 🧠 **Business Logic Layer**
+### 🧠 Business Logic Layer
 
-  * Separation of concerns
-  * Clean and maintainable structure
+* Clear separation between UI, logic, and data
+* Maintainable and scalable code structure
 
-* 🛡️ **Data Integrity**
+### 🛡️ Data Integrity & Reliability
 
-  * SQL Transactions (Commit / Rollback)
-  * Stored Procedures & Triggers
-
-* ⚙️ **Permissions System**
-
-  * Bitwise-based role and permission handling
+* SQL Transactions for safe operations
+* Stored Procedures & Triggers for enforcing rules
 
 ---
 
 ## 🏗️ Architecture
 
-The project follows a **Layered Architecture**:
+This project follows a **3-Tier Layered Architecture**:
 
 ```
 Presentation Layer (Windows Forms)
@@ -68,32 +68,45 @@ SQL Server Database
 
 ## ▶️ Getting Started
 
-### 🔑 Demo Account (for testing)
+### 🔑 Demo Account
 
-You can log in using the following credentials:
+Use the following credentials to explore the system:
 
 * **Username:** `Admin2`
 * **Password:** `12345`
 
 ---
 
+### ⚙️ Setup Instructions
+
+1. Clone the repository
+2. Open the solution file in Visual Studio
+3. Configure the database connection in `App.config`
+4. Run the project
+
+---
 
 ## 💡 Future Improvements
 
-* Add Logging System
-* Improve Exception Handling
-* Convert to Web API (ASP.NET Core)
-* Add Reporting Dashboard
+* Implement centralized logging system
+* Enhance exception handling strategy
+* Migrate to Web API using ASP.NET Core
+* Add analytics & reporting dashboard
 
 ---
 
 ## 📌 Notes
 
-This project is built for learning and demonstrating real-world backend and system design concepts, including transaction handling, layered architecture, and role-based security.
+This project demonstrates practical backend concepts such as:
+
+* Transaction management
+* Role-based security
+* Layered architecture design
+
+It is designed to simulate real-world banking system behavior in a desktop environment.
 
 ---
 
 ## 👨‍💻 Author
 
 **Hicham Benhemine**
-
