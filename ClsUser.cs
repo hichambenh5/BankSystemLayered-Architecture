@@ -17,7 +17,15 @@ namespace BANKSYSTEMWINDOWSFORMS
       
         public string Password { get; private set; }
         public int RoleID { get; set; }
-        
+        public int Permissions
+        {
+            get
+            {
+                
+                ClsRoles role = ClsRoles.Find(this.RoleID);
+                return (role != null) ? role.Permissions : 0;
+            }
+        }
         public ClsUser()
         {
             this.UserID = -1;

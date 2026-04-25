@@ -18,7 +18,11 @@ namespace BANKSYSTEMWINDOWSFORMS
             InitializeComponent();
             _login = login;
         }
-
+        private bool CheckUserPermission(ClsRoles.enPermissions permissions)
+        {
+            if (ClsGlobal.CurrentUser.Permissions == (int)ClsRoles.enPermissions.eAll) return true;
+            return ClsRoles.CheckAccess(ClsGlobal.CurrentUser.Permissions, (int)permissions);
+        }
         private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -49,7 +53,8 @@ namespace BANKSYSTEMWINDOWSFORMS
 
         private void AddUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmAddNewUser frm = new FrmAddNewUser(ClsGlobal.CurrentUser.UserID);
+            frm.ShowDialog();
         }
 
         private void AddRolesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -101,7 +106,10 @@ namespace BANKSYSTEMWINDOWSFORMS
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-
+            clientsToolStripMenuItem.Enabled = CheckUserPermission(ClsRoles.enPermissions.eManageClients);
+            usersToolStripMenuItem.Enabled = CheckUserPermission(ClsRoles.enPermissions.eManageUsers);
+            transactionsToolStripMenuItem.Enabled = CheckUserPermission(ClsRoles.enPermissions.eTransactions);
+            rolesToolStripMenuItem.Enabled = CheckUserPermission(ClsRoles.enPermissions.eUpdatePermissions);
         }
 
         private void ToolStripMenuItem11_Click(object sender, EventArgs e)
